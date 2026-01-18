@@ -1,19 +1,42 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>ألعاب ميمي 🎮</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-O الاحترافية - 3 مستويات</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial; text-align:center; background:#f5f5f5; padding-top:50px;">
+<body>
+    <div class="container">
+        <h1>لعبة <span class="x-text">X</span> <span class="o-text">O</span></h1>
+        
+        <div class="scoreboard">
+            <div>أنت (X): <span id="user-score">0</span></div>
+            <div>الكمبيوتر (O): <span id="cpu-score">0</span></div>
+        </div>
 
-  <h1>🎮 ألعاب ميمي</h1>
+        <div class="difficulty-modes">
+            <button onclick="setDifficulty('easy')" id="btn-easy">سهل</button>
+            <button onclick="setDifficulty('medium')" id="btn-medium">متوسط</button>
+            <button onclick="setDifficulty('hard')" id="btn-hard" class="active">صعب جداً</button>
+        </div>
 
-  <p>اضغطي هنا لتشغيل اللعبة:</p>
+        <div id="status">دورك الآن (X)</div>
 
-  <a href="https://meme224.my.canva.site/" target="_blank"
-     style="display:inline-block; padding:15px 25px; background:#7c4dff; color:white; text-decoration:none; border-radius:10px; font-size:18px;">
-     ▶️ تشغيل اللعبة
-  </a>
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
 
+        <button id="restart">إعادة اللعب</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
